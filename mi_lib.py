@@ -15,10 +15,23 @@ def crea_arreglo(filas,columnas):
         for j in range(columnas):
             cadena=cadena+"\t"+str(M[i][j])
         cadena=cadena+"\n"
-    print(cadena)
+    return cadena
 
 print(crea_arreglo(4,5))
 
+#pregunta3
+
+import numpy as np
+
+def mueve_col(arreglo,índice):
+    arreglo = np.random.randint(0,20, size=(4,3))
+    print(arreglo)
+    n = np.delete(arreglo,[índice],axis=1)
+    print(n)
+    p = arreglo[:,índice]
+    print(p)
+    matriz = np.append(n,p,axis=1)
+    return matriz
 
 
 
